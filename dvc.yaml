@@ -16,6 +16,7 @@ stages:
       - src/stage_02._split_data.py
       - src/utils/all_utils.py
       - config/config.yaml
+      - artifacts/raw_local_dir/data.csv
     params:
       - base.random_state
       - base.test_size
@@ -34,5 +35,9 @@ stages:
       - base.random_state
       - model_param.ElasticNet.alpha
       - model_param.ElasticNet.l1_ratio
+    outs:
+      - artifacts/model_dir/ElesticNet.model
+      - artifacts/model_dir/lr.model
+    
 
 
