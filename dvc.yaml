@@ -38,6 +38,19 @@ stages:
     outs:
       - artifacts/model_dir/ElesticNet.model
       - artifacts/model_dir/lr.model
+  
+  evaluate:
+    cmd: python src/stage_04_evaluate.py --config=config/config.yaml 
+    deps:
+      - src/stage_04_evaluate.py
+      - src/utils/all_utils.py
+      - config/config.yaml
+      - artifacts/split_data_dir/test.csv
+      - artifacts/model_dir/ElesticNet.model
+      - artifacts/model_dir/lr.model
+    outs:
+      - artifacts/reports_dir/en_scores.json
+      - artifacts/reports_dir/lr_scores.json
     
 
 

@@ -14,5 +14,6 @@ artifacts:
   Lr_model_file : lr.model
 
   reports_dir: reports_dir
-  scores: scores.json
+  en_scores: en_scores.json
+  lr_scores: lr_scores.json
   
