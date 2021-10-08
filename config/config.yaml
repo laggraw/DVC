@@ -12,4 +12,7 @@ artifacts:
   model_dir: model_dir
   En_model_file : ElesticNet.model
   Lr_model_file : lr.model
+
+  reports_dir: reports_dir
+  scores: scores.json
   
